@@ -1,7 +1,6 @@
 from django.contrib import admin
-from homepage.models import Id,father_name,adm_date
+from .models import Parent, Child
 
 # Register your models here.
-admin.site.register(Id)
-admin.site.register(father_name)
-admin.site.register(adm_date)
+admin.site.register(Parent)
+admin.site.register(Child)

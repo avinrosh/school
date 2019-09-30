@@ -1,0 +1,9 @@
+{{ child_details }}
+
+<ul>
+  {% for child in child_details.child_set.all %}
+<li> {{ child.child_name }}</li>
+<li> {{ child.age }}</li>
+<li> {{ child.grade }}</li>
+{% endfor %}
+</ul>
