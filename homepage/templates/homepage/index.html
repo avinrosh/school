@@ -1,4 +1,10 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/style.css' %}" />
+
+
 {% if parent_list %}
+<body>
 
 <ul>
   {% for parent in parent_list %}
@@ -10,3 +16,4 @@
 <p>The parent list does not exist</p>
 {% endif %}
 </ul>
+</body>

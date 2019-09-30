@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Parent, Child
+from django.views import generic
 
 # Create your views here.
-def index(request):
-    parent_list=Parent.objects.all()
-    parent_context={'parent_list':parent_list}
-    return render(request,'homepage/index.html',parent_context)
+class IndexView(generic.ListView):
+    template_name='homepage/index.html'
+    context_object_name='parent_list'
+
+    def get_queryset(self):
+        return Parent.objects.all()
 
 def details(request,parent_id):
     child_details= Parent.objects.get(pk=parent_id)
