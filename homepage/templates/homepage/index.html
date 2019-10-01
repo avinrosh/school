@@ -9,7 +9,7 @@
 <ul>
   {% for parent in parent_list %}
 <li>
-<a href="{% url 'details' parent.Paent_id  %}"> {{ parent.parent_fn }} </a>
+<a href="{% url 'details' parent.parent_id  %}"> {{ parent.parent_fn }} </a>
 </li>
 {% endfor %}
 {% else %}
